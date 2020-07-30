@@ -36,7 +36,7 @@ jobs:
 
     steps:
     - name: WeChat notification
-      run: curl https://sc.ftqq.com/${{ secrets.ServerChan }}.send?text=${{ env.FILE_NAME }} Start compiling
+      run: curl https://sc.ftqq.com/${{ secrets.ServerChan }}.send?text=${{ env.FILE_NAME }} 开始编译
       
     - name: Checkout
       uses: actions/checkout@master
@@ -103,7 +103,7 @@ jobs:
       id: organize
       if: steps.compile.outputs.status == 'success' && !cancelled()
       run: |
-        echo "${{ env.useVersionInfo }}" > openwrt/bin/targets/x86/64/${{ env.DATE }}更新说明.md
+        echo "${{ env.useVersionInfo }}" > openwrt/bin/targets/x86/64/${{ env.DATE }}
         rm -rf openwrt/bin/targets/x86/64/packages
         tar -zcvf bin.tar.gz openwrt/bin/targets/x86/64
         cp bin.tar.gz ./openwrt/bin/targets/x86/64/bin.tar.gz
@@ -155,4 +155,4 @@ jobs:
 
     - name: WeChat notification
       if: steps.organize.outputs.status == 'success' && !cancelled()
-      run: curl https://sc.ftqq.com/${{ secrets.ServerChan }}.send?text=${{ env.FILE_NAME }} Successful release-Compilation end
+      run: curl https://sc.ftqq.com/${{ secrets.ServerChan }}.send?text=${{ env.FILE_NAME }} 发布成功-编译结束
