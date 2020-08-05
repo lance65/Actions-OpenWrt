@@ -15,12 +15,12 @@ sed -i 's/OpenWrt/Microdop AutoBuild $(TZ=UTC-8 date "+%Y%m%d") @ OpenWrt/g' pac
 
 #添加额外软件包
 git clone https://github.com/tty228/luci-app-serverchan.git package/openwrt-packages/luci-app-serverchan
-git clone https://github.com/lisaac/luci-app-dockerman.git package/openwrt-packages/luci-app-dockerman
-git clone https://github.com/bin20088/luci-app-koolddns.git package/openwrt-packages/luci-app-koolddns
-git clone https://github.com/Repobor/luci-app-koolproxyR.git package/openwrt-packages/luci-app-koolproxyR
+#git clone https://github.com/lisaac/luci-app-dockerman.git package/openwrt-packages/luci-app-dockerman
+#git clone https://github.com/bin20088/luci-app-koolddns.git package/openwrt-packages/luci-app-koolddns
+#git clone https://github.com/Repobor/luci-app-koolproxyR.git package/openwrt-packages/luci-app-koolproxyR
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/openwrt-packages/luci-app-ssr-plus
 #赋予koolddns权限
-chmod 0755 package/openwrt-packages/luci-app-koolddns/root/etc/init.d/koolddns
+#chmod 0755 package/openwrt-packages/luci-app-koolddns/root/etc/init.d/koolddns
 chmod 0755 package/openwrt-packages/luci-app-koolddns/root/usr/share/koolddns/aliddns
 ./scripts/feeds update -a
 ./scripts/feeds install -a
