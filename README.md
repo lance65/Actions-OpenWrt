@@ -12,9 +12,10 @@ Here only talk about the release method, part of the code borrows or uses [id77]
  
 ## Thanks
 
-- [P3TERX](https://github.com/P3TERX/Actions-OpenWrt)
+- [openwrt](https://github.com/openwrt)
 - [coolsnowwolf](https://github.com/coolsnowwolf)
 - [Li2nOnline](https://github.com/Lienol)
+- [P3TERX](https://github.com/P3TERX/Actions-OpenWrt)
 - [jerrykuku](https://github.com/jerrykuku)
 - [fw876](https://github.com/fw876)
 - [tty228](https://github.com/tty228)
