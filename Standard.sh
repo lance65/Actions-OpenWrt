@@ -9,7 +9,7 @@
 #修改机器名称
 sed -i 's/OpenWrt/Microdop/g' package/base-files/files/bin/config_generate
 #修改网关地址
-sed -i 's/192.168.1.1/10.10.10.130/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.10.10.131/g' package/base-files/files/bin/config_generate
 #修改时区
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 #修改默认主题
