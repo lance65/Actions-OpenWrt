@@ -22,7 +22,6 @@ ln -s ../../../luci-theme-argon ./package/lean/
 sed -i 's/OpenWrt/Microdop Development AutoBuild $(TZ=UTC-8 date "+%Y%m%d") @ OpenWrt/g' package/lean/default-settings/files/zzz-default-settings
 
 #添加额外软件包
-git clone https://github.com/lisaac/luci-app-dockerman.git package/openwrt-packages/luci-app-dockerman
 svn co https://github.com/Lienol/openwrt-package/trunk/package/chinadns-ng package/openwrt-packages/chinadns-ng
 svn co https://github.com/Lienol/openwrt-package/trunk/package/tcping package/openwrt-packages/tcping
 svn co https://github.com/Lienol/openwrt-package/trunk/package/trojan-go package/openwrt-packages/trojan-go
