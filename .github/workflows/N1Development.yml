@@ -60,7 +60,7 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         cd openwrt
-        ./scripts/feeds update -a
+        ./scripts/feeds update -a && git clonehttps://github.com/tuanqing/install-program package/install-program
         ./scripts/feeds install -a
         useVersionInfo=$(git show -s --date=short --format="The last time before compilation [➦Main source code](https://github.com/coolsnowwolf/lede)Update record: <br/> Updated:% an <br/> Updated:% cd <br/> update:% s <br/> hash value:% H ")
         echo "::set-env name=useVersionInfo::$useVersionInfo"
